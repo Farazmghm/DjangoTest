@@ -1,0 +1,27 @@
+{% extends "maintemp.html" %}
+
+
+
+{% block content %}
+
+        <table border='1' >
+            <tr> 
+               <td>name</td>
+               <td>Family</td>
+               <td>Age</td>
+               <td>Email</td>
+             </tr>
+             {% for i in faraz %}
+                <tr> 
+                    <td>{{i.name}}</td>
+                    <td>{{i.family}}</td>
+                    <td>{{i.age}}</td>
+                    <td>{{i.email}}</td>
+             </tr>
+    
+             {% endfor %}
+   
+        </table> 
+    
+
+{% endblock  %}
