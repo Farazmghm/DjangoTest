@@ -1,0 +1,93 @@
+{
+  "nbformat": 4,
+  "nbformat_minor": 0,
+  "metadata": {
+    "colab": {
+      "provenance": [],
+      "authorship_tag": "ABX9TyMa4Sj4vrjs33KcK22NSK0N",
+      "include_colab_link": true
+    },
+    "kernelspec": {
+      "name": "python3",
+      "display_name": "Python 3"
+    },
+    "language_info": {
+      "name": "python"
+    }
+  },
+  "cells": [
+    {
+      "cell_type": "markdown",
+      "metadata": {
+        "id": "view-in-github",
+        "colab_type": "text"
+      },
+      "source": [
+        "<a href=\"https://colab.research.google.com/github/Farazmghm/DjangoTest/blob/main/NLP\" target=\"_parent\"><img src=\"https://colab.research.google.com/assets/colab-badge.svg\" alt=\"Open In Colab\"/></a>"
+      ]
+    },
+    {
+      "cell_type": "code",
+      "execution_count": 3,
+      "metadata": {
+        "colab": {
+          "base_uri": "https://localhost:8080/"
+        },
+        "id": "WJhEKgyI-Y9r",
+        "outputId": "ec580be6-aa94-4f8b-bcba-003ac5ae57f5"
+      },
+      "outputs": [
+        {
+          "output_type": "stream",
+          "name": "stdout",
+          "text": [
+            "['runner', 'run', 'run', 'ran', 'ranner']\n"
+          ]
+        }
+      ],
+      "source": [
+        "from nltk.stem import PorterStemmer\n",
+        "porter=PorterStemmer()\n",
+        "words=['runner','running','runs','ran','ranner']\n",
+        "stem_words=[porter.stem(i) for i in words]\n",
+        "print(stem_words)\n"
+      ]
+    },
+    {
+      "cell_type": "code",
+      "source": [
+        "from nltk.stem import PorterStemmer\n",
+        "p1=PorterStemmer()\n",
+        "w=['happy','happier','happying','happiness']\n",
+        "stem=[p1.stem(i) for i in w]\n",
+        "print(stem)"
+      ],
+      "metadata": {
+        "colab": {
+          "base_uri": "https://localhost:8080/"
+        },
+        "id": "66bR68l0AQpj",
+        "outputId": "cbc4be1b-f9f8-4ba7-a251-c08196116968"
+      },
+      "execution_count": 4,
+      "outputs": [
+        {
+          "output_type": "stream",
+          "name": "stdout",
+          "text": [
+            "['happi', 'happier', 'happi', 'happi']\n"
+          ]
+        }
+      ]
+    },
+    {
+      "cell_type": "code",
+      "source": [],
+      "metadata": {
+        "id": "BBR-LcmaA9rn"
+      },
+      "execution_count": null,
+      "outputs": []
+    }
+  ]
+}
